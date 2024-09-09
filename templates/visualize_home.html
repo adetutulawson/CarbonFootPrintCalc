@@ -1,0 +1,23 @@
+<!-- templates/visualize_home.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Energy and Cost Visualization</h2>
+
+<p>Select an appliance to visualize its energy usage and carbon footprint:</p>
+
+<ul>
+    <li><a href="{{ url_for('visualize_energy_route', appliance_letter='K') }}">Kettle Energy Usage</a></li>
+    <li><a href="{{ url_for('visualize_cost_route', appliance_letter='Kettle') }}">Kettle Cost</a></li>
+    <li><a href="{{ url_for('visualize_energy_route', appliance_letter='Washing_Machine') }}">Washing Machine Energy Usage</a></li>
+    <li><a href="{{ url_for('visualize_cost_route', appliance_letter='Washing_Machine') }}">Washing Machine Cost</a></li>
+    <!-- Add more appliances here as needed -->
+</ul>
+
+<h3>Energy Usage Graph</h3>
+<img src="{{ url_for('visualize_energy_route', appliance_letter='Kettle') }}" alt="Energy Graph">
+
+<h3>Cost Graph</h3>
+<img src="{{ url_for('visualize_cost_route', appliance_letter='Kettle') }}" alt="Cost Graph">
+
+{% endblock %}

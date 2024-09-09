@@ -1,0 +1,25 @@
+<!-- templates/visualization.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Visualization</h2>
+<form method="GET" action="{{ url_for('visualize_appliance') }}">
+    <label for="appliance">Select Appliance for Energy and Carbon Visualization:</label>
+    <select id="appliance" name="appliance">
+        <option value="kettle">Kettle</option>
+        <option value="washing_machine">Washing Machine</option>
+        <!-- Add more appliances here as needed -->
+    </select>
+    <button type="submit">Visualize</button>
+</form>
+
+<form method="GET" action="{{ url_for('visualize_appliance_cost') }}">
+    <label for="appliance">Select Appliance for Cost Visualization:</label>
+    <select id="appliance" name="appliance">
+        <option value="kettle">Kettle</option>
+        <option value="washing_machine">Washing Machine</option>
+        <!-- Add more appliances here as needed -->
+    </select>
+    <button type="submit">Visualize</button>
+</form>
+{% endblock %}

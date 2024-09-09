@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Washing Machine Usage Results</h2>
+
+<!-- Per Wash Results -->
+<h3>Per Wash</h3>
+<p>Energy Consumption: {{ energy_per_wash_kwh }} kWh</p>
+<p>Carbon Footprint: {{ carbon_footprint_per_wash }} kg CO2</p>
+<p>Cost: £{{ cost_per_wash }}</p>
+
+<!-- Weekly Results -->
+<h3>Total for the Week</h3>
+<p>Total Energy Consumption: {{ weekly_energy_kwh }} kWh</p>
+<p>Total Carbon Footprint: {{ weekly_carbon_footprint }} kg CO2</p>
+<p>Total Cost: £{{ weekly_cost }}</p>
+
+<!-- Benchmark Comparison -->
+{% if tips %}
+    <h3>Recommendations</h3>
+    <ul>
+        {% for tip in tips %}
+            <li>{{ tip }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+<a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+{% endblock %}

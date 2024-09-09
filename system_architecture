@@ -1,0 +1,16 @@
+digraph "System Architecture" {
+	graph [fontcolor="#2D3436" fontname="Sans-Serif" fontsize=15 label="System Architecture" nodesep=0.60 pad=2.0 rankdir=LR ranksep=0.75 splines=ortho]
+	node [fixedsize=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	"0ac0e81e9a89453fb14e93c89bce005f" [label=User height=1.9 image="C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/onprem/client\user.png" shape=none]
+	"760c2b60d68c441694ad95670b815b0a" [label="Web Application" height=1.9 image="C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/programming/language\python.png" shape=none]
+	"0d72fad9dbaf43e2b05740370050dbe6" [label="SQLite Database" height=1.9 image="C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/onprem/database\postgresql.png" shape=none]
+	ca4c09c640a44251b67f0d49ca8adb58 [label="appliance_data Table" height=1.9 image="C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/onprem/database\postgresql.png" shape=none]
+	"731d399dfcf14a37a7cf0f74b82089c0" [label="maintenance_data Table" height=1.9 image="C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/onprem/database\postgresql.png" shape=none]
+	"0ac0e81e9a89453fb14e93c89bce005f" -> "760c2b60d68c441694ad95670b815b0a" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"760c2b60d68c441694ad95670b815b0a" -> "0d72fad9dbaf43e2b05740370050dbe6" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"760c2b60d68c441694ad95670b815b0a" -> ca4c09c640a44251b67f0d49ca8adb58 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"760c2b60d68c441694ad95670b815b0a" -> "731d399dfcf14a37a7cf0f74b82089c0" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	ca4c09c640a44251b67f0d49ca8adb58 -> "760c2b60d68c441694ad95670b815b0a" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"731d399dfcf14a37a7cf0f74b82089c0" -> "760c2b60d68c441694ad95670b815b0a" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+}

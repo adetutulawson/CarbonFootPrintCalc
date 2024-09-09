@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Kettle Usage Results</h2>
+
+<!-- Current Usage -->
+<h3>Current Usage</h3>
+<p>Energy Consumption: {{ total_energy_kwh }} kWh</p>
+<p>Carbon Footprint: {{ total_carbon_footprint }} kg CO2</p>
+<p>Cost: £{{ cost }}</p>
+
+<!-- Comparisons -->
+<h3>Comparison with Previous Usage</h3>
+<p>Change from Yesterday: {{ change_yesterday if change_yesterday else 'No data available' }} kg CO2</p>
+<p>Change from Last Month: {{ change_last_month if change_last_month else 'No data available' }} kg CO2</p>
+<p>Change from Last Year: {{ change_last_year if change_last_year else 'No data available' }} kg CO2</p>
+
+<!-- Benchmark Comparison -->
+<h3>Benchmark Comparison</h3>
+<p>Benchmark Energy Consumption: {{ benchmark_energy_kwh }} kWh</p>
+<p>Benchmark Cost: £{{ benchmark_cost }}</p>
+
+<!-- Tips/Recommendations -->
+{% if tips %}
+    <h3>Recommendations</h3>
+    <ul>
+        {% for tip in tips %}
+            <li>{{ tip }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Great job! Your kettle usage is efficient and below the benchmark. Keep up the good energy habits!</p>
+{% endif %}
+
+<a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+{% endblock %}

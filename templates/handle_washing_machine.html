@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="form-header">Washing Machine Usage</h2>
+
+<form method="post" action="{{ url_for('handle_washing_machine') }}" class="form-container">
+    <div class="form-group">
+        <label for="number_of_washes">Number of washes per week:</label>
+        <input type="number" id="number_of_washes" name="number_of_washes" required>
+    </div>
+
+    <div class="form-group">
+        <label for="washing_temp">Washing temperature:</label>
+        <select id="washing_temp" name="washing_temp" required>
+            <option value="cold">Cold</option>
+            <option value="warm">Warm</option>
+            <option value="hot">Hot</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="cycle_type">Cycle type:</label>
+        <select id="cycle_type" name="cycle_type" required>
+            <option value="eco">Eco</option>
+            <option value="quick">Quick</option>
+            <option value="heavy">Heavy</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn-submit">Calculate</button>
+</form>
+{% endblock %}

@@ -1,0 +1,14 @@
+<!-- templates/visualize_energy_usage.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Energy and Carbon Footprint Visualization</h2>
+
+<p>Select an appliance to visualize:</p>
+<ul>
+    <li><a href="{{ url_for('visualize_energy_and_carbon', appliance_letter='K') }}">Kettle</a></li>
+    <li><a href="{{ url_for('visualize_energy_and_carbon', appliance_letter='W') }}">Washing Machine</a></li>
+    <!-- Add more appliances as needed -->
+</ul>
+
+{% endblock %}

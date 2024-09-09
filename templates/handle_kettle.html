@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="form-header">Kettle Usage Scenario</h2>
+
+<form method="POST" action="{{ url_for('handle_kettle') }}" class="form-container">
+    <div class="form-group">
+        <label for="number_of_cups">Enter the number of cups of tea you intend to make:</label>
+        <input type="number" id="number_of_cups" name="number_of_cups" min="1" value="1" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="cup_size">Enter the cup size in ml (leave empty to use default {{ DEFAULT_CUP_VOLUME_ML }} ml):</label>
+        <input type="number" id="cup_size" name="cup_size" min="1" value="250" placeholder="{{ DEFAULT_CUP_VOLUME_ML }}">
+    </div>
+    
+    <div class="form-group">
+        <label for="starting_temp">Enter the starting temperature of the water (°C):</label>
+        <input type="number" id="starting_temp" name="starting_temp" min="0" max="{{ BOILING_POINT }}" value="{{ ROOM_TEMPERATURE }}" required>
+    </div>
+
+    <button type="submit" class="btn-submit">Calculate</button>
+</form>
+{% endblock %}
+

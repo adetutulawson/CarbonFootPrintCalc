@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="POST" action="{{ url_for('login') }}" class="login-form">
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" class="form-input" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" class="form-input" required>
+    </div>
+    
+    <button type="submit" class="btn">Login</button>
+</form>
+<script>
+    window.onload = function() {
+        document.getElementById('loginForm').reset();  // Clears the form fields
+    };
+</script>
+<p class="register-link">Don't have an account? <a href="{{ url_for('register') }}">Register here</a></p>
+{% endblock %}
