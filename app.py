@@ -30,7 +30,7 @@ def home():
 
 app.secret_key = 'your_secret_key'
 #DATABASE = 'database/CARBON_FOOTPRINT.db'
-DATABASE = r"C:\Users\User\Documents\FinalMSCProject\database\CARBON_FOOTPRINT.db"
+DATABASE = "/database/CARBON_FOOTPRINT.db"
 
 def get_db_connection():
     conn = sqlite3.connect(DATABASE)
