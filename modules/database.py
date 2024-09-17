@@ -1,7 +1,7 @@
 import sqlite3
 from contextlib import closing
 
-DATABASE_FILE = r"C:\Users\User\Documents\FinalMSCProject\database\CARBON_FOOTPRINT.db"
+DATABASE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'database', 'CARBON_FOOTPRINT.db')
 
 def ensure_db():
     with closing(sqlite3.connect(DATABASE_FILE)) as conn:
