@@ -235,8 +235,8 @@ header .item-button a:hover {
 
 .section-1 {
   width: 100vw;
-  height: 95vh;
-  display: flex;
+/*   height: 95vh;
+  display: flex; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -361,12 +361,13 @@ h2 {
             <a href="{{ url_for('logout') }}">Logout</a>
         </nav>
     </header> -->
-
+<div class="container">
     <main class="section-1">
         <p><br></p>
         {% block content %}
         {% endblock %}
     </main>
+        </div>
 
     <footer>
         <p>&copy; 2024 Demmie MSC Carbon Foot Print</p>
