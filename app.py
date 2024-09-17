@@ -6,7 +6,7 @@ from modules.appliances import handle_appliance_scenario, calculate_changes, DEF
 from modules.visualisation import visualize_energy_and_carbon, visualize_cost_over_time
 from modules.utils import  maintenance_intervals, usage_scenarios, appliance_abbreviations,appliance_power_ratings, benchmark_data, datetime, register_user, login_user
 from modules.calculations import CO2_EMISSION_FACTOR_UK,ELECTRICITY_RATE_PER_KWH, calculate_energy_cost
-from modules.database import ensure_db, save_daily_data, update_maintenance_date,sqlite3
+from modules.database import ensure_db, save_daily_data, update_maintenance_date,sqlite3, DATABASE_FILE
 from modules.appliances import calculate_energy_consumption,calculate_changes, DEFAULT_CUP_VOLUME_ML, calculate_energy_for_cup_of_tea,calculate_energy_for_heating_water, ROOM_TEMPERATURE,BOILING_POINT, DEFAULT_Kettle_EFFICIENCY
 
 import sqlite3
@@ -19,7 +19,7 @@ from flask import Flask, render_template
 import io
 import base64
 from dateutil import parser 
-from modules.visualisation import visualize_energy_and_carbon, visualize_cost_over_time, fetch_cost_data, fetch_energy_and_carbon_data, DATABASE_FILE
+from modules.visualisation import visualize_energy_and_carbon, visualize_cost_over_time, fetch_cost_data, fetch_energy_and_carbon_data
 
 
 
