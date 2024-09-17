@@ -303,7 +303,7 @@ h2 {
           <a href="{{ url_for('visualize_energy_usage') }}">Visualise Usage</a>
         </div>
         <div class="item-button">
-          <a href="#">Let's Talk</a>
+          <a href="{{ url_for('logout') }}">Logout</a>
         </div>
       </div>
       <!-- Button Trigger Modal Start -->
@@ -335,7 +335,7 @@ h2 {
                 <i class="bi bi-folder-check"></i><a href="{{ url_for('visualize_energy_usage') }}">Visualise Usage</a>
               </div>
               <div class="modal-line">
-                <i class="bi bi-telephone"></i><a href="#">Let's Talk</a>
+                <i class="bi bi-telephone"></i><a href="{{ url_for('logout') }}">Logout</a>
               </div>
             </div>
             <div class="mobile-modal-footer">
