@@ -1,9 +1,10 @@
 import sqlite3
 import matplotlib.pyplot as plt
 from dateutil import parser
+from modules.database import get_db_connection
 
 #DATABASE_FILE = "CARBON_FOOTPRINT.db"
-DATABASE_FILE = r"C:\Users\User\Documents\FinalMSCProject\database\CARBON_FOOTPRINT.db"
+# DATABASE_FILE = r"C:\Users\User\Documents\FinalMSCProject\database\CARBON_FOOTPRINT.db"
 
 def fetch_energy_and_carbon_data(appliance_letter):
     query = """
@@ -13,7 +14,7 @@ def fetch_energy_and_carbon_data(appliance_letter):
     ORDER BY Date;
     """
     
-    with sqlite3.connect(DATABASE_FILE) as conn:
+    with get_db_connection() as conn:
         cursor = conn.cursor()
         cursor.execute(query, (appliance_letter,))
         return cursor.fetchall()
@@ -51,7 +52,7 @@ def fetch_cost_data(appliance_letter):
     ORDER BY date;
     """
     
-    with sqlite3.connect(DATABASE_FILE) as conn:
+    with get_db_connection() as conn:
         cursor = conn.cursor()
         cursor.execute(query, (appliance_letter,))
         return cursor.fetchall()
