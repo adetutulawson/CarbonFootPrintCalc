@@ -1,19 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="dashboard-container">
-    <nav class="sidebar">
+    <h1>Welcome back 👋🏾</h1>
+<!--     <nav class="sidebar">
         <ul>
-           <!--<li><a href="{{ url_for('dashboard') }}">Home</a></li>--> 
+           <li><a href="{{ url_for('dashboard') }}">Home</a></li> 
             <li><a href="{{ url_for('handle_kettle') }}">Kettle Usage</a></li>
             <li><a href="{{ url_for('handle_washing_machine') }}">Washing Machine Usage</a></li>
             <li><a href="{{ url_for('visualize_energy_usage') }}">Visualise Usage</a></li>
             
             <li><a href="{{ url_for('logout') }}">Logout</a></li>
         </ul>
-    </nav>
+    </nav> -->
 
     <div class="main-content">
-        <img src="{{ url_for('static', filename='images/carbon_footprint_image.jpg') }}" alt="Carbon Footprint" class="background-image">
+        <img src="{{ url_for('static', filename='images/cb1.jpg') }}" alt="Carbon Footprint" class="background-image">
     </div>
 </div>
 {% endblock %}
